@@ -19,6 +19,8 @@ import drip from "../assets/drip.png";
 
 // Produk
 import Product1 from "../assets/Product1.png";
+import cabaibubuk from "../assets/cabaibubuk.png";
+import cabaikering from "../assets/cabaikering.png";
 
 export default function Beranda() {
   const items = [
