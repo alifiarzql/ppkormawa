@@ -37,7 +37,10 @@ export default function Beranda() {
     { icon: pemantauanIcon, text: "Pemantauan Tanaman Secara Real-Time" },
     { icon: biayaIcon, text: "Mengurangi Biaya Operasional" },
     { icon: ramahIcon, text: "Ramah Lingkungan" },
-    { icon: kemajuanIcon, text: "Kemajuan Teknologi untuk Pertanian Masa Kini" },
+    {
+      icon: kemajuanIcon,
+      text: "Kemajuan Teknologi untuk Pertanian Masa Kini",
+    },
   ];
 
   const products = [
@@ -138,34 +141,37 @@ export default function Beranda() {
         </div>
       </section>
 
-      {/* Tentang Kami */}
-      <section className="py-10 bg-[#E0F6CF]">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center gap-8">
-          <div className="flex-shrink-0 flex justify-center">
-            <img
-              src={tentangkami}
-              alt="Tentang Kami"
-              className="w-40 h-40 object-cover rounded-full border-4 border-[#547047] shadow-md"
-            />
-          </div>
-          <div className="flex-1">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#547047] mb-3">
-              Tentang Kami
-            </h2>
-            <p className="text-gray-700 text-[17px] leading-relaxed text-justify">
-              PPK Ormawa Himatikro menjalankan program pengembangan pertanian di
-              Desa Baran melalui penerapan teknologi <b>Smart Farming</b>.
-              Program ini berfokus pada optimalisasi budidaya cabai dengan
-              memanfaatkan <b>teknologi irigasi tetes</b> yang efisien dan ramah
-              lingkungan. Kegiatan ini dilaksanakan bersama{" "}
-              <b>kelompok tani Muda Manunggal Roso</b> sebagai mitra utama,
-              dengan tujuan meningkatkan produktivitas pertanian, efisiensi
-              penggunaan air, serta pemberdayaan petani muda melalui penerapan
-              inovasi berbasis teknologi.
-            </p>
-          </div>
-        </div>
-      </section>
+{/* Tentang Kami */}
+<section className="">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-stretch overflow-hidden rounded-xl shadow-sm">
+    {/* Gambar kiri */}
+    <div className="w-full md:w-1/2 h-[250px] md:h-auto">
+      <img
+        src={tentangkami}
+        alt="Tentang Kami"
+        className="w-full h-full object-cover object-center"
+      />
+    </div>
+
+    {/* Teks kanan */}
+    <div className="w-full bg-[#E0F6CF] p-6 md:p-8 flex flex-col justify-center">
+      <h2 className="text-xl md:text-2xl font-semibold text-[#547047] mb-2">
+        Tentang Kami
+      </h2>
+      <p className="text-gray-700 text-[16px] leading-relaxed text-justify">
+        PPK Ormawa Himatikro menjalankan program pengembangan pertanian di Desa
+        Baran melalui penerapan teknologi <b>smart farming</b>. Program ini
+        mengoptimalkan budidaya cabai melalui penggunaan{" "}
+        <b>teknologi irigasi tetes</b> pada perkebunan yang melibatkan kelompok
+        tani <b>Muda Manunggal Roso</b>. Kegiatan ini bertujuan untuk
+        meningkatkan efisiensi pertanian, produktivitas hasil panen, serta
+        mendorong penerapan inovasi berbasis teknologi di bidang pertanian.
+      </p>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Apa yang Kami Lakukan */}
       <section className="bg-white py-16">
@@ -174,7 +180,10 @@ export default function Beranda() {
             Apa yang Kami <span className="text-black">Lakukan?</span>
           </h2>
 
-          <div ref={carouselRef} className="flex space-x-8 overflow-x-hidden py-6">
+          <div
+            ref={carouselRef}
+            className="flex space-x-8 overflow-x-hidden py-6"
+          >
             {[...items, ...items].map((item, index) => (
               <div
                 key={index}
@@ -201,13 +210,16 @@ export default function Beranda() {
             Produk Terbaik Kami
           </h2>
           <p className="text-gray-700 mb-10">
-            Hasil olahan terbaik dari kebun kami, mempunyai kualitas premium dan cita rasa khas.
+            Hasil olahan terbaik dari kebun kami, mempunyai kualitas premium dan
+            cita rasa khas.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {products.map((product) => (
               <div key={product.id} className="p-4">
-                <p className="text-red-600 font-semibold mb-2">{product.name}</p>
+                <p className="text-red-600 font-semibold mb-2">
+                  {product.name}
+                </p>
                 <img
                   src={product.image}
                   alt={product.name}
